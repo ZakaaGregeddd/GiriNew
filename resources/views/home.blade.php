@@ -18,19 +18,16 @@
         </div>
 
         <div class="downSect">
-            @if(isset($weather))
-                <h2>Cuaca Gunung Bromo</h2>
-                <p><strong>Waktu Lokal:</strong> {{ $weather['local_datetime'] ?? 'N/A' }}</p>
-                <p><strong>Suhu:</strong> {{ $weather['t'] ?? 'N/A' }}°C</p>
-                <p><strong>Kelembapan:</strong> {{ $weather['hu'] ?? 'N/A' }}%</p>
-                <p><strong>Kondisi Cuaca:</strong> {{ $weather['weather_desc'] ?? 'N/A' }}</p>
-                <p><strong>Kecepatan Angin:</strong> {{ $weather['ws'] ?? 'N/A' }} km/jam</p>
-                <p><strong>Arah Angin:</strong> {{ $weather['wd'] ?? 'N/A' }}</p>
-                <p><strong>Tutupan Awan:</strong> {{ $weather['tcc'] ?? 'N/A' }}%</p>
-                <p><strong>Jarak Pandang:</strong> {{ $weather['vs_text'] ?? 'N/A' }} km</p>
-            @else
-                <p>Gagal mengambil data cuaca. Silakan coba lagi nanti.</p>
+                        @if(isset($cuacaHariIni))
+                <div class="cuaca-box">
+                    <h2>Cuaca di {{ $lokasi }}</h2>
+                    <p>Kondisi: {{ $cuacaHariIni }}</p>
+                    <p>Suhu: {{ $suhuMin }}°C - {{ $suhuMax }}°C</p>
+                </div>
+            @elseif(isset($error))
+                <p>{{ $error }}</p>
             @endif
+
         </div>
     </div>
 </body>
