@@ -1,0 +1,58 @@
+/* Reset margin dan padding untuk seluruh dokumen */
+body, html {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Pastikan perhitungan ukuran elemen konsisten */
+}
+
+.parent {
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    padding: 0; /* Pastikan padding diatur ke nol */
+    margin: 0; /* Pastikan margin diatur ke nol */
+}
+
+.upSect {
+    background-image: url(../img/gunung1.png);
+    width: 100vw;
+    height: 80vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin: 0; /* Hapus margin */
+    padding: 0; /* Hapus padding */
+    z-index: 0;
+}
+
+.logo {
+    display: flex;
+    justify-content: flex-end;
+    /* justify-content: flex-end; */
+    height: 10%;
+    /* width: 10%; */
+    margin-top: 50px;
+    margin-right: 40px;
+    img {
+        width: 100%;
+        height: 100%;
+    }
+}
+
+
+.downSect {
+    position: absolute;
+    top: 1000px;
+    width: 100vw;
+    height: 670px; /* Rectangle penuh layar */
+    background-image: linear-gradient(to bottom, rgba(32,38,52,0), rgba(32,38,52,1));
+    margin: 0; /* Hapus margin */
+    padding: 0; /* Hapus padding */
+    z-index: 1;
+}
+
+.status {
+    background-color: #202634;
+    width: 100vw;
+    height: 1000px;
+}
